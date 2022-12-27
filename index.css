@@ -1,0 +1,151 @@
+* {
+  margin: auto;
+  padding: 0px;
+  /* box-sizing: border-box; */
+}
+
+h1 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  font-size: 5rem;
+  font-weight: bold;
+  color: white;
+  animation-name: h1;
+  animation-duration: 10s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes h1 {
+  0% {
+    color: aqua;
+  }
+  25% {
+    color: rgb(75, 143, 238);
+  }
+  50% {
+    color: rgb(10, 191, 251);
+  }
+  75% {
+    color: rgb(253, 29, 212);
+  }
+  100% {
+    color: rgb(246, 255, 0);
+  }
+}
+
+.container-fluid {
+  /* width: 400px; */
+  margin: 5px auto;
+  padding: 10px;
+
+  background-color: rgb(255, 255, 255);
+}
+
+.wrapper {
+  /* background-color: rgb(46, 136, 233); */
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 10rem; */
+  align-content: center;
+
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  padding-top: 20px;
+}
+
+button {
+  background-color: rgb(0, 173, 196);
+  border-radius: 2px;
+  width: 80px;
+  height: 2.5rem;
+  width: 6.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+input {
+  width: 20rem;
+  height: 3.5rem;
+  background-color: white;
+  text-align: center;
+  font-size: 1rem;
+  padding: 10px;
+  font-weight: bold;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 2px;
+}
+
+.info-wrapper {
+  width: 450px;
+  height: 400px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 2rem;
+  padding: 20px;
+}
+
+.info-box {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  color: rgb(11, 1, 1);
+  text-align: center;
+  margin: 5rem;
+  border-radius: 2px;
+  
+}
+
+.info-title{
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+li{
+  list-style: none;
+}
+
+.city_info{
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  width: 400px;
+}
+
+.city-temp{
+  font-size: 2rem;
+  font-weight: bold;
+  }
+
+  .city-temp sup{
+font-weight: 0.5rem;
+font-size: 1.5rem;
+}
+
+ h3 sup{
+  background-color: rgb(0, 173, 196);
+  color: rgb(255, 255, 255);
+  border-radius: 8px;
+  font-weight: 0.5rem;
+font-size: 1rem;
+}
+
+.list-style{
+  border: 1px solid;
+  box-shadow:1px 5px rgb(0, 173, 196);
+  border-radius: 10px;
+ 
+}
+
+figcaption{
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1rem;
+}
