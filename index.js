@@ -6,11 +6,11 @@ function toDegrees(value) {
   return value - 273;
 }
 
-const api = "bd8ed089379fabeda55353da3aedbbd5";
+const apiKey = "bd8ed089379fabeda55353da3aedbbd5";
 
 function getLocationName() {
   const getLocationDetails = fetch(
-    `http://api.openweathermap.org/geo/1.0/direct?q=${textInput.value}&appid=${api}`
+    `http://api.openweathermap.org/geo/1.0/direct?q=${textInput.value}&appid=${apiKey}`
   )
     .then((response) => {
       return response.json();
@@ -35,8 +35,13 @@ function getLocationName() {
 let objectName = {};
 
 function clickHandler() {
+  if (textInput.value === "") {
+    alert("Please enter a valid city name");
+    return;
+  }
+
   getLocationName().then((data) => {
-    data.map((res) => {
+    data?.map((res) => {
       objectName.name = res.name;
       objectName.lat = res.lat;
       objectName.lon = res.lon;
@@ -46,7 +51,7 @@ function clickHandler() {
 
   function getLocation() {
     fetch(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${objectName.lat}&lon=${objectName.lon}&appid=${api}`
+      `https://api.openweathermap.org/data/2.5/weather?lat=${objectName.lat}&lon=${objectName.lon}&appid=${apiKey}`
     )
       .then((response) => {
         return response.json();
@@ -79,7 +84,6 @@ function clickHandler() {
         list.appendChild(li);
       });
   }
-  textInput.textContent = "";
 }
 
 btn.addEventListener("click", clickHandler);
